@@ -12,7 +12,8 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",
   dpi=200,
-  fig.width=4
+  fig.width=4,
+  fig.height=3
 )
 ```
 
@@ -21,9 +22,9 @@ library(dpcrint)
 par(mar=c(3,3,1,1))
 ```
 
-## Genome integrity estimation from multiplex ddPCR
+## Genome integrity estimation from multiplex dPCR
 
-This package was built in order to recover, from multiplex ddPCR, an idea of the integrity of the genome in a sample. In this kind of study, $J$ positions along the genome are tageted by a multiplex ddPCR.
+This package was built in order to recover, from multiplex dPCR, an idea of the integrity of the genome in a sample. In this kind of study, $J$ positions along the genome are tageted by a multiplex dPCR.
 The presence or absence of signal for these targets gives an idea of the integrity of the genome in the sample analysed. 
 
 A first approach to carry out this analysis is to look directly at the percentage of partitions showing a signal for all the targets (among the partitions for which a signal is observed). 
@@ -37,7 +38,7 @@ In addition, the integrity of the sequences may be partial and it would be usefu
 These reasons led us to develop a deconvolution algorithm adapted to these data. It takes as inputs: 
 
 * For each combination of signals present/absent for each target, the number of concerned partitions,
-* the expected average number of sequences per partition (supplied by the manufacturer of the ddPCR device),
+* the expected average number of sequences per partition (supplied by the manufacturer of the dPCR device),
 * the probability of amplification for each target on the genome. 
 
 If some part of this information is missing, it can be recovered at some conditions.
@@ -83,7 +84,7 @@ print(respobslam$lambda)
 print(lambda)
 ```
 
-<!-- One can also try to recover those parameters from other ddPCR results from samples with known sequence types proportions through the SEM algorithm, but the results that are obtained can be very poor. -->
+<!-- One can also try to recover those parameters from other dPCR results from samples with known sequence types proportions through the SEM algorithm, but the results that are obtained can be very poor. -->
 
 <!-- ```{r datasim0} -->
 <!-- respobsSEM=OptPobsSEM(NY,ObsTypes,propl,coverseq,lambda0=lambda,evallam=F,Nit=100,plotopt=T) -->
