@@ -1,6 +1,8 @@
 ---
 title: "Using-dpcrint"
-output: rmarkdown::html_vignette
+output: 
+  html_document:
+    keep_md: true
 vignette: >
   %\VignetteIndexEntry{Using-dpcrint}
   %\VignetteEngine{knitr::rmarkdown}
@@ -8,6 +10,7 @@ vignette: >
 ---
 
 ```{r, include = FALSE}
+#rmarkdown::html_vignette
 knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>",

@@ -1,10 +1,10 @@
 Package: dpcrint
-Title: multiplex ddPCR analysis for genome integrity assessment
+Title: multiplex dPCR analysis for genome integrity assessment
 Version: 0.0.0.9000
 Authors@R: 
     person("Marie", "Courbariaux", , "marie.courbariaux@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0001-9275-5504"))
-Description: Analysis of results from multiplex ddPCR targetting several spots on the genome in order to assess its integrity. A first module permits to recover the PCR amplification probability per target from ddPCR on fully integer sequences. A second module recovers the proportion of each possible continuous sequence type from the results of ddPCR.
+Description: Analysis of results from multiplex ddPCR targeting several spots on the genome in order to assess its integrity. A first module permits to recover the PCR amplification probability per target from ddPCR on fully integer sequences. A second module recovers the proportion of each possible continuous sequence type from the results of ddPCR.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
