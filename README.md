@@ -1,16 +1,6 @@
----
-title: "Using-dpcrint"
-output: 
-  html_document:
-    keep_md: true
----
-
-
-
 
 ```r
 library(dpcrint)
-par(mar=c(3,3,1,1))
 ```
 
 ## Genome integrity estimation from multiplex dPCR
@@ -108,14 +98,14 @@ respropl=OptProplEM(NY,ObsTypes,pobs=pobs,lambda0=lambda)
 abline(h=propl,col=1:L,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropl0-1.png)<!-- -->
+![](/README_files/figure-html/optpropl0-1.png)<!-- -->
 
 ```r
 plot(as.vector(respropl$propl)~propl,ylab="estimated proportions",xlab="true proportions",pch=19)
 abline(0,1,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropl0-2.png)<!-- -->
+![](/README_files/figure-html/optpropl0-2.png)<!-- -->
 
 In order to recover both the sequence types proportions in the sample (from any sample type) and the average number of sequences in one partition, one can use the proposed EM algorithm with the *evallam=TRUE* option:
 
@@ -124,21 +114,21 @@ respropllam=OptProplEM(NY,ObsTypes,pobs=pobs,evallam=T)
 abline(h=propl,col=1:L,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropllam0-1.png)<!-- -->
+![](/README_files/figure-html/optpropllam0-1.png)<!-- -->
 
 ```r
 plot(as.vector(respropllam$propl)~propl,ylab="estimated proportions",xlab="true proportions",pch=19)
 abline(0,1,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropllam0-2.png)<!-- -->
+![](/README_files/figure-html/optpropllam0-2.png)<!-- -->
 
 ```r
 plot(respropllam$LAMBDA,ylab="lambda",xlab="iterations")
 abline(h=lambda)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropllam0-3.png)<!-- -->
+![](/README_files/figure-html/optpropllam0-3.png)<!-- -->
 
 
 With another toy data set:
@@ -170,14 +160,14 @@ respropl=OptProplEM(NY,ObsTypes,pobs=pobs,lambda0=lambda)
 abline(h=propl,col=1:L,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropl-1.png)<!-- -->
+![](/README_files/figure-html/optpropl-1.png)<!-- -->
 
 ```r
 plot(as.vector(respropl$propl)~propl,ylab="estimated proportions",xlab="true proportions",pch=19)
 abline(0,1,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropl-2.png)<!-- -->
+![](/README_files/figure-html/optpropl-2.png)<!-- -->
 
 
 ```r
@@ -185,18 +175,18 @@ respropllam=OptProplEM(NY,ObsTypes,pobs=pobs,evallam=T)
 abline(h=propl,col=1:L,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropllam-1.png)<!-- -->
+![](/README_files/figure-html/optpropllam-1.png)<!-- -->
 
 ```r
 plot(as.vector(respropllam$propl)~propl,ylab="estimated proportions",xlab="true proportions",pch=19)
 abline(0,1,lty=2)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropllam-2.png)<!-- -->
+![](/README_files/figure-html/optpropllam-2.png)<!-- -->
 
 ```r
 plot(respropllam$LAMBDA,ylab="lambda",xlab="iterations")
 abline(h=lambda)
 ```
 
-![](/private/var/folders/4h/b18j_vj51rn90w8rzq1hr1bh0000gp/T/RtmpnorXiq/preview-af847bad1679.dir/Using-dpcrint_files/figure-html/optpropllam-3.png)<!-- -->
+![](/README_files/figure-html/optpropllam-3.png)<!-- -->
